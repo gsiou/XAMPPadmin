@@ -27,8 +27,7 @@ sleep 5
 echo "..."
 echo "Started.."
 echo "Creating folder for files..."
-mkdir xamppfiles
-cd xamppfiles
+cd /tmp
 echo "Done"
 echo "Downloading files..."
 wget "http://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.4/xampp-linux-1.7.4.tar.gz/download" -O Xampp.tar.gz
