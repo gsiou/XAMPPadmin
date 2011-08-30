@@ -29,7 +29,7 @@ import webbrowser #for update-check
 #functions
 def update_check():
 	print("Redirecting to updates page...")
-	webbrowser.open_new("http://xampp.sourceforge.net")
+	webbrowser.open_new("http://xamppadmin.sf.net")
 
 def restart():
     print("Restarting...")
@@ -106,13 +106,13 @@ def actions():
     elif sel == "4":
         server_stop()
     elif sel == "5":
-        server_restart()
-    elif sel == "6":
         server_delete()
-    elif sel == "7":
+    elif sel == "6":
         print("Closing Programm")
         time.sleep ( 2 )
         quit()
+    elif sel == "7":
+        server_delete()
     elif sel == "u":
 		update_check()
     else:
