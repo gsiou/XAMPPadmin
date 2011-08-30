@@ -1,0 +1,16 @@
+About me >>
+-----------------------------------
+Name:George Anastasiou
+Website:ghostblader.blogspot.com
+E-Mail:dr.george995@gmail.com
+-----------------------------------
+
+
+
+XAMPPadmin is a simple programm that takes care of most common XAMPP commands, so you dont have to memorize
+them or spend time typing.It also offers the abillity to install XAMPP in case you dont have it already
+installed and the option to remove it completely.See COPYING for licence details
+
+KNOW ISSUES:The folder with the downloaded files is not deleted after installation.
+
+TODO:Add more functions,check if XAMPP is already installed,option to change installation path
