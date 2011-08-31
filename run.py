@@ -77,10 +77,18 @@ def server_delete():
             restart()
             return
 
-
-	
-
-
+def install_wordpress():
+        checkvar = os.system("cd /opt/lampp")
+        if checkvar == 0 :
+            os.system("./wordpress_installer.sh")
+        else:
+	    print("You dont have XAMPP installed!!!")
+	    time.sleep( 2 )
+	    restart()
+	return
+    
+    
+  
 def options():
     print("Hello")
     print("To install XAMPP press 1")
@@ -93,6 +101,7 @@ def options():
     print("Please make sure that if you want to do") 
     print("actions 2 to 7 you must have XAMPP installed...")
     print("To check for updates press u,updates are important in case of bugs or if a new \n XAMPP version is available.")
+    print("To download wordpress files into your htdocs folder type drupal")
     return
 
 def actions():
@@ -114,7 +123,9 @@ def actions():
     elif sel == "7":
         server_delete()
     elif sel == "u":
-		update_check()
+	update_check()
+    elif sel == "wp":
+        install_wordpress()
     else:
         print("Please Select one of the available options.")
         time.sleep ( 3 ) 
