@@ -101,7 +101,7 @@ def options():
     print("Please make sure that if you want to do") 
     print("actions 2 to 7 you must have XAMPP installed...")
     print("To check for updates press u,updates are important in case of bugs or if a new \n XAMPP version is available.")
-    print("To download wordpress files into your htdocs folder type drupal")
+    print("To download wordpress files into your htdocs folder type wp")
     return
 
 def actions():
