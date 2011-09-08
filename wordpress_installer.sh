@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#version 1
+#version 2
 
 #Copyright 2011 George Anastasiou
 
