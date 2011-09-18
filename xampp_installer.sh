@@ -40,7 +40,6 @@ echo "Unpackaging data and copying to /opt..."
 sudo tar xvfz Xampp.tar.gz -C /opt
 echo "done..."
 echo "Deleting folder with download..."
-sudo rm -r xamppfiles/ #Does not work (yet)
 echo "Done"
 echo "Goodbye..."
 sleep 2
