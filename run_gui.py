@@ -53,10 +53,11 @@ class NewButton():
 def gotopage():
     webbrowser.open_new("http://xamppadmin.sf.net")
 
-def onClick():
+def install_xampp():
+	check = os.system("xterm -e sh xampp_installer.sh")
 	return 
 	
-def server_start(): #Needs Testing
+def server_start(): 
 	check = os.system("/opt/lampp/lampp start")
 	if check == 0:
 	   NewForm("Succes", "Started XAMPP successfully")
@@ -81,13 +82,17 @@ def server_restart():
     return 
 	
 def configure(): #Needs Testing
-	os.system("/opt/lampp/lampp security")
+	check = os.system("xterm -e /opt/lampp/lampp security")
+	if check == 0:
+		return
+	else:
+		status() 
 	return
 	
 def install_wordpress():
     checkvar = os.system("cd /opt/lampp")
     if checkvar == 0 :
-        os.system("./wordpress_installer.sh")
+        os.system("xterm -e ./wordpress_installer.sh")
     else:
         NewForm("Error","You dont have XAMPP installed!!!")
        # l4 = Label(top, text= result)
@@ -102,6 +107,15 @@ def status():
         NewForm("XAMPPadmin","You dont have XAMPP installed!!!")
 	return
 
+def remove():
+     NewForm("Error" , "This function is not ready yet")
+     return
+
+def backup():
+    os.system("mkdir /home/xampp_backup")
+    os.system("cp -r /opt/lampp/htdocs /home/xampp_backup")
+    NewForm("Success" , "Backup created at /home/xampp_backup")
+
 #-----------------------------------#
 #GUI--------------------------------#
 #-----------------------------------#
@@ -109,7 +123,7 @@ def status():
 top = Tk()
 top.title("XAMPPadmin")
 top.geometry("400x300")
-NewButton("Install XAMPP" , onClick)
+NewButton("Install XAMPP" , install_xampp)
 NewButton("Configure XAMPP" , configure) 
 NewButton("Start XAMPP" , server_start) 
 NewButton("Stop XAMPP" , server_stop) 
@@ -117,7 +131,8 @@ NewButton("Restart XAMPP" , server_restart)
 NewButton("Visit Homepage" , gotopage)
 NewButton("Install Wordpress Files" , install_wordpress )
 NewButton("Check Status" , status)
-
+NewButton("Backup htdocs/" , backup)
+NewButton("Remove XAMPP" , remove)
 mainloop() 
 
 
