@@ -37,12 +37,16 @@ class NewForm():
 		b_exit = Button(self.form, text="Close Window", command=self.form.destroy)
 		b_exit.pack()
 
+
 class NewButton():
 	def __init__(self ,text ,command):
 		self.text = text
 		self.command = command
-		self.button =  Button(top ,text= self.text , command = self.command)
-		self.button.pack() 
+		f = Frame(top, height=30, width=300)
+		f.pack_propagate(0)
+		f.pack()
+		self.button =  Button(f ,text= self.text , command = self.command)
+		self.button.pack(fill=BOTH) 
 
 
 
