@@ -36,7 +36,10 @@ class NewForm():
 		l1.pack()
 		b_exit = Button(self.form, text="Close Window", command=self.form.destroy)
 		b_exit.pack()
-
+	def confirm(self,command):
+		self.command = command 
+		b_del = Button(self.form , text="Yes" , command=self.command)
+		b_del.pack()
 
 class NewButton():
 	def __init__(self ,text ,command):
@@ -112,9 +115,18 @@ def status():
 	return
 
 def remove():
-     NewForm("Error" , "This function is not ready yet")
+     NewForm("Warning" , "Are you sure you want to delete XAMPP?").confirm(c_remove)
      return
 
+def c_remove():
+    checkvar = os.system("cd /opt/lampp")
+    if checkvar == 0:
+        os.system("rm -rf /opt/lampp")
+	NewForm("Success","XAMPP successfully deleted")
+    else:
+        NewForm("XAMPPadmin","You dont have XAMPP installed!!!")
+	return
+    
 def backup():
     os.system("mkdir /home/xampp_backup")
     os.system("cp -r /opt/lampp/htdocs /home/xampp_backup")
