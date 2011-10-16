@@ -121,7 +121,7 @@ def actions():
         time.sleep ( 2 )
         quit()
     elif sel == "7":
-        server_delete()
+        server_restart()
     elif sel == "u":
 	update_check()
     elif sel == "wp":
