@@ -136,6 +136,20 @@ def backup():
 #GUI--------------------------------#
 #-----------------------------------#
 
+
+#
+#Check for root rights!
+#
+
+if  not os.geteuid() == 0:
+    NewForm("Error!","You need to run XAMPPadmin as root!")
+    quit()
+
+
+#---------------------#
+
+
+
 top = Tk()
 top.title("XAMPPadmin")
 top.geometry("400x300")
