@@ -134,12 +134,16 @@ def actions():
 
 
 def start():
-#Script Start
-    options()
-    actions()
-    finish()
-    return
 
+	if not os.geteuid() == 0:
+		print("You must be root to run XAMPPadmin!")
+		quit()
+
+#Script Start
+	options()
+        actions()
+        finish()
+        return
 
 start()
 
