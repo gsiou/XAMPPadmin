@@ -86,6 +86,14 @@ def install_wordpress():
 	    time.sleep( 2 )
 	    restart()
 	return
+
+def isInstalled():
+	checkvar = os.system("cd /opt/lampp")
+	if checkvar == 0:
+		return 1
+	else:
+	        return 0
+
     
     
   
@@ -138,7 +146,10 @@ def start():
 	if not os.geteuid() == 0:
 		print("You must be root to run XAMPPadmin!")
 		quit()
-
+	if isInstalled() == 0:
+		print("XAMPP is NOT  installed")
+	else:
+		print("XAMPP is installed")
 #Script Start
 	options()
         actions()
@@ -146,7 +157,6 @@ def start():
         return
 
 start()
-
 
     
 
