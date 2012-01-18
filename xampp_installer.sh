@@ -30,7 +30,7 @@ echo "Creating folder for files..."
 cd /tmp
 echo "Done"
 echo "Downloading files..."
-wget "http://sourceforge.net/projects/xampp/files/XAMPP%20Linux/1.7.4/xampp-linux-1.7.4.tar.gz/download" -O Xampp.tar.gz
+wget "http://sourceforge.net/projects/xampp/files/BETAS/xampp-linux-1.7.7.tar.gz/download" -O Xampp.tar.gz
 echo "Finished...."
 sleep 1
 echo "Installation procees will start soon"
