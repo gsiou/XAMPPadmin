@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #  run.py
-# version 2
+# version 3
 
 #Copyright 2011 George Anastasiou
 
