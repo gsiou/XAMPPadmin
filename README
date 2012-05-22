@@ -11,5 +11,4 @@ them or spend time typing.It also offers the abillity to install XAMPP in case y
 installed and the option to remove it completely.See COPYING for licence details
 
 
-
-TODO:Add more functions,check if XAMPP is already installed,option to change installation path,add gui.
+Version 3:Added newest XAMPP version.A gui is available.Now users can install wordpress with XAMPPadmin.

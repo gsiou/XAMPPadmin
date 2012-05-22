@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#version 2
+#version 3
 
 #Copyright 2011 George Anastasiou
 
@@ -21,7 +21,7 @@
 
 
 clear
-echo "This programm will install XAMPP for linux version 1.7.4"
+echo "This programm will install XAMPP for linux version 1.7.7"
 echo "Installation will start in 5 seconds..."
 sleep 5
 echo "..."

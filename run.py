@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 #  run.py
-# version 2
+# version 3
 
 #Copyright 2011 George Anastasiou
 
@@ -78,8 +78,7 @@ def server_delete():
             return
 
 def install_wordpress():
-        checkvar = os.system("cd /opt/lampp")
-        if checkvar == 0 :
+        if isInstalled == 1 :
             os.system("./wordpress_installer.sh")
         else:
 	    print("You dont have XAMPP installed!!!")
@@ -104,7 +103,7 @@ def options():
     print("To start XAMPP press 3")
     print("To stop XAMPP press 4")
     print("To delete XAMPP press 5")
-    print("To terminate this programm press 6")
+    print("To terminate this programm press 0")
     print("To restart XAMPP press 7")
     print("Please make sure that if you want to do") 
     print("actions 2 to 7 you must have XAMPP installed...")
@@ -124,7 +123,7 @@ def actions():
         server_stop()
     elif sel == "5":
         server_delete()
-    elif sel == "6":
+    elif sel == "0":
         print("Closing Programm")
         time.sleep ( 2 )
         quit()
@@ -156,7 +155,8 @@ def start():
         finish()
         return
 
-start()
+if __name__ == '__main__':
+	start()
 
     
 
