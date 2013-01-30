@@ -35,7 +35,6 @@ def restart():
     print("Restarting...")
     os.system("clear")
     start()
-    return
 
 def finish():
     end = raw_input("If you want to return to menu type 1 , otherwise the script will finish.:")
@@ -43,27 +42,21 @@ def finish():
         restart()
     else:
         quit()
-    return
     
 def install():
 	os.system("./xampp_installer.sh")
-	return
 
 def configure():
 	os.system("sudo /opt/lampp/lampp security")
-	return
 	
 def server_start():
 	os.system("sudo /opt/lampp/lampp start")
-	return
 
 def server_stop():
     os.system("sudo /opt/lampp/lampp stop")
-    return 
 
 def server_restart():
 	os.system("sudo /opt/lampp/lampp restart")
-	return
 
 def server_delete():
 	conf = raw_input("Are you sure you want to delete XAMPP?If yes press 1 , otherwise you will return to main menu!:")
@@ -75,7 +68,6 @@ def server_delete():
             print("Returning to main menu...")
             time.sleep ( 2 )
             restart()
-            return
 
 def install_wordpress():
         if isInstalled == 1 :
@@ -84,7 +76,6 @@ def install_wordpress():
 	    print("You dont have XAMPP installed!!!")
 	    time.sleep( 2 )
 	    restart()
-	return
 
 def isInstalled():
 	checkvar = os.system("cd /opt/lampp")
@@ -109,7 +100,6 @@ def options():
     print("actions 2 to 7 you must have XAMPP installed...")
     print("To check for updates press u,updates are important in case of bugs or if a new \n XAMPP version is available.")
     print("To download wordpress files into your htdocs folder type wp")
-    return
 
 def actions():
     sel = raw_input("What would you like to do?:")
@@ -137,7 +127,6 @@ def actions():
         print("Please Select one of the available options.")
         time.sleep ( 3 ) 
         restart()
-        return
 
 
 def start():
@@ -153,7 +142,6 @@ def start():
 	options()
         actions()
         finish()
-        return
 
 if __name__ == '__main__':
 	start()
