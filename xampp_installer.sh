@@ -30,14 +30,13 @@ echo "Creating folder for files..."
 cd /tmp
 echo "Done"
 echo "Downloading files..."
-wget "http://www.apachefriends.org/download.php?xampp-linux-1.8.3-1-installer.run" -O Xampp.tar.gz
+wget "http://www.apachefriends.org/download.php?xampp-linux-1.8.3-1-installer.run" -O Xampp.run
 echo "Finished...."
 sleep 1
 echo "Installation procees will start soon"
 sleep 3
-echo "Started..."
-echo "Unpackaging data and copying to /opt..."
-tar xvfz Xampp.tar.gz -C /opt
+chmod a+x Xampp.run
+./Xampp.run
 echo "Done"
 echo "Goodbye..."
 sleep 2
