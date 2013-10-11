@@ -37,7 +37,7 @@ echo "Installation procees will start soon"
 sleep 3
 echo "Started..."
 echo "Unpackaging data and copying to /opt..."
-sudo tar xvfz Xampp.tar.gz -C /opt
+tar xvfz Xampp.tar.gz -C /opt
 echo "Done"
 echo "Goodbye..."
 sleep 2
