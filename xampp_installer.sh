@@ -21,7 +21,7 @@
 
 
 clear
-echo "This programm will install XAMPP for linux version 1.7.7"
+echo "This programm will install XAMPP for linux version 1.8.3"
 echo "Installation will start in 5 seconds..."
 sleep 5
 echo "..."
@@ -30,7 +30,7 @@ echo "Creating folder for files..."
 cd /tmp
 echo "Done"
 echo "Downloading files..."
-wget "http://sourceforge.net/projects/xampp/files/BETAS/xampp-linux-1.7.7.tar.gz/download" -O Xampp.tar.gz
+wget "http://www.apachefriends.org/download.php?xampp-linux-1.8.3-1-installer.run" -O Xampp.tar.gz
 echo "Finished...."
 sleep 1
 echo "Installation procees will start soon"
