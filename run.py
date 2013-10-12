@@ -47,22 +47,22 @@ def install():
 	os.system("./xampp_installer.sh")
 
 def configure():
-	os.system("sudo /opt/lampp/lampp security")
+	os.system("/opt/lampp/lampp security")
 	
 def server_start():
-	os.system("sudo /opt/lampp/lampp start")
+	os.system("/opt/lampp/lampp start")
 
 def server_stop():
-    os.system("sudo /opt/lampp/lampp stop")
+    os.system("/opt/lampp/lampp stop")
 
 def server_restart():
-	os.system("sudo /opt/lampp/lampp restart")
+	os.system("/opt/lampp/lampp restart")
 
 def server_delete():
 	conf = raw_input("Are you sure you want to delete XAMPP?If yes press 1 , otherwise you will return to main menu!:")
         if conf == "1":
             print("Deleting XAMPP...")
-            os.system("sudo rm -rf /opt/lampp")
+            os.system("rm -rf /opt/lampp")
             print("Done...")
         else:
             print("Returning to main menu...")
