@@ -28,125 +28,108 @@ import webbrowser #for update-check
 
 #functions
 def update_check():
-	print("Redirecting to updates page...")
-	webbrowser.open_new("http://xamppadmin.sf.net")
-
-def restart():
-    print("Restarting...")
-    os.system("clear")
-    start()
-
-def finish():
-    end = raw_input("If you want to return to menu type 1 , otherwise the script will finish.:")
-    if end == "1":
-        restart()
-    else:
-        quit()
-    
+        print("Redirecting to updates page...")
+        webbrowser.open_new("https://github.com/gsiou/XAMPPadmin")
+        
 def install():
-	os.system("./xampp_installer.sh")
+        os.system("./xampp_installer.sh")
 
 def configure():
-	os.system("/opt/lampp/lampp security")
-	
+        os.system("/opt/lampp/lampp security")
+        
 def server_start():
-	os.system("/opt/lampp/lampp start")
+        os.system("/opt/lampp/lampp start")
 
 def server_stop():
-    os.system("/opt/lampp/lampp stop")
+        os.system("/opt/lampp/lampp stop")
 
 def server_restart():
-	os.system("/opt/lampp/lampp restart")
+        os.system("/opt/lampp/lampp restart")
 
 def server_delete():
-	conf = raw_input("Are you sure you want to delete XAMPP?If yes press 1 , otherwise you will return to main menu!:")
+        conf = raw_input("Are you sure you want to delete XAMPP?If yes press 1 , otherwise you will return to main menu!:")
         if conf == "1":
-            print("Deleting XAMPP...")
-            os.system("rm -rf /opt/lampp")
-            print("Done...")
+                print("Deleting XAMPP...")
+                os.system("rm -rf /opt/lampp")
+                print("Done...")
         else:
-            print("Returning to main menu...")
-            time.sleep ( 2 )
-            restart()
+                print("Returning to main menu...")
+                time.sleep ( 2 )
+                restart()
 
 def install_wordpress():
         if isInstalled == 1 :
-            os.system("./wordpress_installer.sh")
+                os.system("./wordpress_installer.sh")
         else:
-	    print("You dont have XAMPP installed!!!")
-	    time.sleep( 2 )
-	    restart()
+                print("You dont have XAMPP installed!!!")
+                time.sleep( 2 )
+                restart()
 
 def isInstalled():
-	checkvar = os.system("cd /opt/lampp")
-	if checkvar == 0:
-		return 1
-	else:
-	        return 0
-
-    
-    
-  
+        checkvar = os.system("cd /opt/lampp")
+        if checkvar == 0:
+                return 1
+        else:
+                return 0
 def options():
-    print("Hello")
-    print("To install XAMPP press 1")
-    print("To configure XAMPP press 2")
-    print("To start XAMPP press 3")
-    print("To stop XAMPP press 4")
-    print("To delete XAMPP press 5")
-    print("To terminate this programm press 0")
-    print("To restart XAMPP press 7")
-    print("Please make sure that if you want to do") 
-    print("actions 2 to 7 you must have XAMPP installed...")
-    print("To check for updates press u,updates are important in case of bugs or if a new \n XAMPP version is available.")
-    print("To download wordpress files into your htdocs folder type wp")
+        print("Menu:")
+        print("To install XAMPP press 1")
+        print("To configure XAMPP press 2")
+        print("To start XAMPP press 3")
+        print("To stop XAMPP press 4")
+        print("To delete XAMPP press 5")
+        print("To terminate this programm press 0")
+        print("To restart XAMPP press 7")
+        print("Please make sure that if you want to do") 
+        print("actions 2 to 7 you must have XAMPP installed...")
+        print("To check for updates press u,updates are important in case of bugs or if a new \n XAMPP version is available.")
+        print("To download wordpress files into your htdocs folder type wp")
 
 def actions():
-    sel = raw_input("What would you like to do?:")
-    if sel == "1":
-        install() #Password for this action is asked during the execution
-    elif sel == "2":
-        configure()
-    elif sel == "3":
-        server_start()
-    elif sel == "4":
-        server_stop()
-    elif sel == "5":
-        server_delete()
-    elif sel == "0":
-        print("Closing Programm")
-        time.sleep ( 2 )
-        quit()
-    elif sel == "7":
-        server_restart()
-    elif sel == "u":
-	update_check()
-    elif sel == "wp":
-        install_wordpress()
-    else:
-        print("Please Select one of the available options.")
-        time.sleep ( 3 ) 
-        restart()
+        sel = raw_input("What would you like to do?:")
+        if sel == "1":
+                install() #Password for this action is asked during the execution
+        elif sel == "2":
+                configure()
+        elif sel == "3":
+                server_start()
+        elif sel == "4":
+                server_stop()
+        elif sel == "5":
+                server_delete()
+        elif sel == "0":
+                print("Closing Programm")
+                time.sleep ( 2 )
+                quit()
+        elif sel == "7":
+                server_restart()
+        elif sel == "u":
+                update_check()
+        elif sel == "wp":
+                install_wordpress()
+        else:
+                print("Please Select one of the available options.")
+                time.sleep ( 3 ) 
+                restart()
 
 
 def start():
-
 	if not os.geteuid() == 0:
-		print("You must be root to run XAMPPadmin!")
-		quit()
+                print("You must be root to run XAMPPadmin!")
+                quit()
+        print('''
+########################
+#######XAMPPadmin#######
+########################
+                ''')
 	if isInstalled() == 0:
-		print("XAMPP is NOT  installed")
-	else:
-		print("XAMPP is installed")
-#Script Start
-	options()
+                print("XAMPP is NOT  installed")
+        else:
+                print("XAMPP is installed")
+        #Script Start
+        options()
         actions()
-        finish()
+        start()
 
 if __name__ == '__main__':
-	start()
-
-    
-
-
-
+        start()
