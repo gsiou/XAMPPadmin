@@ -21,7 +21,7 @@
 
 
 clear
-echo "This programm will install XAMPP for linux version 1.8.3"
+echo "This programm will install XAMPP for linux version 5.6.11"
 echo "Installation will start in 5 seconds..."
 sleep 5
 echo "..."
