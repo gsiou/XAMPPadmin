@@ -28,8 +28,10 @@ import webbrowser #for update-check
 
 #functions
 def update_check():
-        print("Redirecting to updates page...")
-        webbrowser.open_new("https://github.com/gsiou/XAMPPadmin")
+        #print("Redirecting to updates page...")
+        #webbrowser.open_new_tab("https://github.com/gsiou/XAMPPadmin")
+        print("You can check for updates here:")
+        print("https://github.com/gsiou/XAMPPadmin")
         
 def install():
         os.system("./xampp_installer.sh")
