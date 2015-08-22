@@ -30,7 +30,7 @@ echo "Creating folder for files..."
 cd /tmp
 echo "Done"
 echo "Downloading files..."
-wget "http://www.apachefriends.org/download.php?xampp-linux-1.8.3-1-installer.run" -O Xampp.run
+wget "https://www.apachefriends.org/xampp-files/5.6.11/xampp-linux-x64-5.6.11-1-installer.run" -O Xampp.run
 echo "Finished...."
 sleep 1
 echo "Installation procees will start soon"
