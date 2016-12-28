@@ -26,24 +26,13 @@ echo "What path would you like to use??(i.e if you type blog the visit path will
 read path
 echo "Installation will start in 5 seconds..."
 sleep 5
-echo "..."
-echo "Started.."
-echo "Creating folder for files..."
 cd /tmp
-echo "Done"
 echo "Downloading files..."
 wget "http://wordpress.org/latest.tar.gz" -O WP.tar.gz
-echo "Finished...."
-sleep 1
-echo "Installation procees will start soon"
-sleep 3
-echo "Started..."
 echo "Unpackaging data and copying..."
-sudo tar xvfz WP.tar.gz -C /opt/lampp/htdocs
-cd /opt/lampp/htdocs
-sudo mv wordpress $path
+sudo tar xvfz WP.tar.gz
+sudo mv wordpress /opt/lampp/htdocs/$path
 echo "done..."
-echo "Now enter http://localhost/$path"
-echo "And setup your server settings :)"
-echo "Goodbye..."
+echo "Now enter http://localhost/$path and setup your wordpress"
+echo "Exiting..."
 sleep 5

@@ -68,23 +68,21 @@ def install_wordpress():
                 restart()
 
 def isInstalled():
-        checkvar = os.system("cd /opt/lampp")
+        checkvar = os.system("cd /opt/lampp &> /dev/null")
         if checkvar == 0:
                 return 1
         else:
                 return 0
 def options():
         print("Menu:")
-        print("To install XAMPP press 1")
-        print("To configure XAMPP press 2")
-        print("To start XAMPP press 3")
-        print("To stop XAMPP press 4")
-        print("To delete XAMPP press 5")
-        print("To terminate this programm press 0")
-        print("To restart XAMPP press 7")
-        print("Please make sure that if you want to do") 
-        print("actions 2 to 7 you must have XAMPP installed...")
-        print("To check for updates press u,updates are important in case of bugs or if a new \n XAMPP version is available.")
+        print("[1] Install XAMPP")
+        print("[2] Configure XAMPP")
+        print("[3] To start XAMPP")
+        print("[4] To stop XAMPP")
+        print("[5] To delete XAMPP")
+        print("[6] To terminate this programm")
+        print("[7] To restart XAMPP")
+        print("To check for updates press u,updates are important in case of bugs or if a new XAMPP version is available.")
         print("To download wordpress files into your htdocs folder type wp")
 
 def actions():
@@ -125,7 +123,7 @@ def start():
 ########################
                 ''')
 	if isInstalled() == 0:
-                print("XAMPP is NOT  installed")
+                print("XAMPP is NOT installed")
         else:
                 print("XAMPP is installed")
         #Script Start

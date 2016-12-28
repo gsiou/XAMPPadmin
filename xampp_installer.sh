@@ -21,22 +21,14 @@
 
 
 clear
-echo "This programm will install XAMPP for linux version 5.6.11"
+echo "This programm will install XAMPP for linux version 7.0.13"
 echo "Installation will start in 5 seconds..."
 sleep 5
-echo "..."
-echo "Started.."
-echo "Creating folder for files..."
 cd /tmp
-echo "Done"
 echo "Downloading files..."
-wget "https://www.apachefriends.org/xampp-files/5.6.11/xampp-linux-x64-5.6.11-1-installer.run" -O Xampp.run
-echo "Finished...."
-sleep 1
-echo "Installation procees will start soon"
-sleep 3
+wget "https://sourceforge.net/projects/xampp/files/XAMPP%20Linux/7.0.13/xampp-linux-x64-7.0.13-1-installer.run/download" -O Xampp.run
+echo "Finished downloading. Installing"
 chmod a+x Xampp.run
-./Xampp.run
+./Xampp.run --mode unattended --launchapps 0
 echo "Done"
-echo "Goodbye..."
 sleep 2
